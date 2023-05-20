@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   :root {
     --color-background: hsl(180, 52%, 96%);
     --color-filter-tablets: hsl(180, 31%, 95%);
@@ -11,11 +11,27 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    font-family: 'League Spartan', sans-serif;
     margin: 0;
     padding: 0;
   }
 
+  html,
+  body {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1rem;
+  }
+
+  .container-listings {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+
+  
+
 `;
 
-export default GlobalStyle;
+export default GlobalStyles;
