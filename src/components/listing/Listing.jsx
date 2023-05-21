@@ -1,14 +1,18 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { StyledListing } from "./Listing.Styled";
 
 const Listing = (props) => {
-  const { data } = props;
+  const { data, setFilters } = props;
 
   const tagsArr = [data.role, data.level, ...data.languages, ...data.tools];
 
+  const handleClick = (e) => {
+    const selectedFilter = e.target.textContent;
+    setFilters((oldState) => [...oldState, selectedFilter]);
+  };
+
   const tagElements = tagsArr.map((tag, i) => (
-    <p key={i} className="tag">
+    <p key={i} className="tag" onClick={handleClick}>
       {tag}
     </p>
   ));

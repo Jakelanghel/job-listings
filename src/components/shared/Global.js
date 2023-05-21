@@ -13,6 +13,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "League Spartan", sans-serif;
   }
 
   html,
@@ -20,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'League Spartan', sans-serif;
     font-size: 1rem;
   }
+
 
   .container-listings {
     padding: 3rem 0;
@@ -29,9 +31,6 @@ const GlobalStyles = createGlobalStyle`
     justify-content: center;
     gap: 3.5rem;
   }
-
-  
-
 `;
 
 export default GlobalStyles;

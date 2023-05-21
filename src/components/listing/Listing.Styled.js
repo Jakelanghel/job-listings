@@ -102,5 +102,6 @@ export const StyledListing = styled.div`
     background-color: var(--color-filter-tablets);
     padding: 0.75rem;
     border-radius: 5px;
+    cursor: pointer;
   }
 `;

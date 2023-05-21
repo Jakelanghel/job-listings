@@ -1,17 +1,25 @@
-import data from "./data.json";
-import GlobalStyles from "./shared/Global";
+import { useState } from "react";
+import GlobalStyles from "./components/shared/Global";
 import Header from "./components/header/Header";
-import Listing from "./components/listing/Listing";
+import { createListings } from "./util/createListings";
+import { ContainerListings } from "./components/listing/ContainerListings.Styled";
+import ActiveFilters from "./components/active-filters/ActiveFilters";
 
 function App() {
-  const listings = data.map((job, i) => {
-    return <Listing key={i} data={job} />;
-  });
+  const [filters, setFilters] = useState([]);
+  // Create and array of job listing elements
+  const listingElements = createListings(filters, setFilters);
+  console.log(filters.length);
   return (
     <>
       <GlobalStyles />
       <Header />
-      <div className="container-listings">{listings}</div>
+      {filters.length > 0 ? (
+        <ActiveFilters filtersArr={filters} setFilters={setFilters} />
+      ) : null}
+      <ContainerListings filters={filters.length}>
+        {listingElements}
+      </ContainerListings>
     </>
   );
 }
