@@ -19,7 +19,7 @@ function App() {
     <>
       <GlobalStyles />
 
-      <main role="main">
+      <main role="main" aria-label="main">
         <Header />
         {renderActiveFilters}
         <ContainerListings filters={filters.length}>
