@@ -13,11 +13,15 @@ export const createListings = (filters, setFilters) => {
     });
     // Return listing for each filtered job
     return filteredJobs.map((job, i) => {
-      return <Listing key={i} data={job} setFilters={setFilters} />;
+      return (
+        <Listing key={i} data={job} filters={filters} setFilters={setFilters} />
+      );
     });
   }
   // If there are no filters return a listing for each job in data array
   return data.map((job, i) => {
-    return <Listing key={i} data={job} setFilters={setFilters} />;
+    return (
+      <Listing key={i} data={job} filters={filters} setFilters={setFilters} />
+    );
   });
 };

@@ -31,6 +31,10 @@ const GlobalStyles = createGlobalStyle`
     justify-content: center;
     gap: 3.5rem;
   }
+
+  .featured-listing {
+    border-left: solid 8px var(--dark-cyan);
+  }
 `;
 
 export default GlobalStyles;

@@ -7,16 +7,19 @@ import ActiveFilters from "./components/active-filters/ActiveFilters";
 
 function App() {
   const [filters, setFilters] = useState([]);
-  // Create and array of job listing elements
+
   const listingElements = createListings(filters, setFilters);
-  console.log(filters.length);
+
+  const renderActiveFilters =
+    filters.length > 0 ? (
+      <ActiveFilters filtersArr={filters} setFilters={setFilters} />
+    ) : null;
+
   return (
     <>
       <GlobalStyles />
       <Header />
-      {filters.length > 0 ? (
-        <ActiveFilters filtersArr={filters} setFilters={setFilters} />
-      ) : null}
+      {renderActiveFilters}
       <ContainerListings filters={filters.length}>
         {listingElements}
       </ContainerListings>

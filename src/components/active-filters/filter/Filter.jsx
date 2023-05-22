@@ -5,10 +5,9 @@ import PropTypes from "prop-types";
 const Filter = (props) => {
   const { filter, setFilters } = props;
 
-  const handleClick = (e) => {
-    const selected = e.target.id;
+  const handleClick = () => {
     setFilters((oldState) => {
-      return oldState.filter((filter) => filter !== selected);
+      return oldState.filter((f) => f !== filter);
     });
   };
 
@@ -16,8 +15,13 @@ const Filter = (props) => {
     <StyledFilter>
       <p className="filter">{filter}</p>
 
-      <div className="container-remove" onClick={handleClick} id={`${filter}`}>
-        <img src={removeIcon} alt="remove filter" />
+      <div className="container-remove" onClick={handleClick}>
+        <img
+          src={removeIcon}
+          alt="remove filter"
+          onClick={handleClick}
+          id={`${filter}`}
+        />
       </div>
     </StyledFilter>
   );

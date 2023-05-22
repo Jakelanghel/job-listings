@@ -32,6 +32,8 @@ export const StyledActiveFilters = styled.div`
     padding: 0.5rem;
     &:hover {
       cursor: pointer;
+      color: var(--dark-cyan);
+      text-decoration-line: underline;
     }
   }
 `;

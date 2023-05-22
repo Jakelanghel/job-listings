@@ -29,6 +29,7 @@ export const StyledFilter = styled.div`
 
     &:hover {
       cursor: pointer;
+      background-color: var(--color-very-dark-grayish-cyan);
     }
   }
 
