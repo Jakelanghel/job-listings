@@ -20,7 +20,7 @@ function App() {
       <GlobalStyles />
       <Header />
       {renderActiveFilters}
-      <ContainerListings filters={filters.length}>
+      <ContainerListings filters={filters.length} role="main">
         {listingElements}
       </ContainerListings>
     </>
