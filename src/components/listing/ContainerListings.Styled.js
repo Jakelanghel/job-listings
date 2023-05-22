@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerListings = styled.main`
+export const ContainerListings = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
