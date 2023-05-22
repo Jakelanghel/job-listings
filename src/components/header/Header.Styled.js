@@ -11,7 +11,7 @@ export const StyledHeader = styled.header`
   background-color: #5da5a4;
 
   h1 {
-    display: none;
+    /* display: none; */
   }
 
   @media screen and (min-width: 900px) {
