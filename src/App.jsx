@@ -16,14 +16,14 @@ function App() {
     ) : null;
 
   return (
-    <>
+    <main>
       <GlobalStyles />
       <Header />
       {renderActiveFilters}
       <ContainerListings filters={filters.length}>
         {listingElements}
       </ContainerListings>
-    </>
+    </main>
   );
 }
 
