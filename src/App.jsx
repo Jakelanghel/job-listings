@@ -18,9 +18,10 @@ function App() {
   return (
     <>
       <GlobalStyles />
-      <Header />
-      {renderActiveFilters}
+
       <main role="main">
+        <Header />
+        {renderActiveFilters}
         <ContainerListings filters={filters.length}>
           {listingElements}
         </ContainerListings>
