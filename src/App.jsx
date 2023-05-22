@@ -16,14 +16,16 @@ function App() {
     ) : null;
 
   return (
-    <main role="main">
+    <>
       <GlobalStyles />
       <Header />
       {renderActiveFilters}
-      <ContainerListings filters={filters.length}>
-        {listingElements}
-      </ContainerListings>
-    </main>
+      <main role="main">
+        <ContainerListings filters={filters.length}>
+          {listingElements}
+        </ContainerListings>
+      </main>
+    </>
   );
 }
 
