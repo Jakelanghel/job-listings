@@ -1,5 +1,6 @@
 {
   "name": "job-listings",
+  "homepage": "https://github.com/Jakelanghel/job-listings",
   "private": true,
   "version": "0.0.0",
   "type": "module",
